@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Test weather request",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+  ]
+}
