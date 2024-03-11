@@ -1,9 +1,16 @@
 import requests
 
-# Reminders: 
-# - This function should return data from OpenWeather API
-# - Remove unused comments and the pass from get_weather() when you write it
-
 def get_weather(city):
-    # Add your code here
-    pass
+    
+    endpoint = 'https://api.openweathermap.org/data/2.5/weather/'
+    api_key = '98beb11ab0ebdd51d1293f2ea44686fe'
+
+    params_data = {
+        "apiKey": api_key,
+        "q": city,
+        "units": "metric"
+    }
+    
+    response = requests.get(f'{endpoint}', params=params_data).json()
+    
+    return response 
